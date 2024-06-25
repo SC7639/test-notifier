@@ -1,0 +1,10 @@
+services:
+  server:
+    image: golang
+    working_dir: /app
+    volumes:
+      - ./:/app
+    develop:
+      watch:
+        - path: ./
+          action: sync+restart
